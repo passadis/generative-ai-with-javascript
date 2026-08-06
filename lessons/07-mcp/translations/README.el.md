@@ -349,7 +349,7 @@ const tools = await client.listTools();
   
   {
     "name": "<tool name>",
-    "description": "<description>".
+    "description": "<description>",
     "inputSchema": {
        "type":"object",
        "properties":{
