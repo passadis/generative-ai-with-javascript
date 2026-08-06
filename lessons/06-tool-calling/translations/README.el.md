@@ -106,9 +106,9 @@ try {
   if (!landingSpot) {
     throw new Error("No suitable landing spot found");
   }
-  console.log(Landing spot found at coordinates: ${landingSpot.lat}, ${landingSpot.long});
+  console.log(`Landing spot found at coordinates: ${landingSpot.lat}, ${landingSpot.long}`);
 } catch (error) {
-  console.log(Error: ${error.message});
+  console.log(`Error: ${error.message}`);
 }
 ```
 
