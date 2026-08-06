@@ -69,7 +69,7 @@ _Αυτό το βίντεο εξηγεί το Tool calling, μια μέθοδο 
 > Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
 > [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
 
-![Ada Lovelace](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/06-tool-calling/assets/amelia-front.jpeg)
+![Amelia Earhart](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/06-tool-calling/assets/amelia-front.jpeg)
 
 **Βήματα**:
 
