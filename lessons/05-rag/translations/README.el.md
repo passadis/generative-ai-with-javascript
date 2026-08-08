@@ -77,7 +77,7 @@ _Αυτό το βίντεο εξηγεί το Retrieval Augmented Generation (RA
 
 > [!IMPORTANT]
 > Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
-> [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
+> [Αποποίηση ευθύνης για Responsible AI](/README.md#responsible-ai-disclaimer)
 
 ![Ada Lovelace](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/05-rag/assets/ada-2.jpeg)
 

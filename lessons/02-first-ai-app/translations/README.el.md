@@ -118,7 +118,7 @@ _Αυτό το βίντεο σου δίνει μια εισαγωγή στα AI 
 
 > [!IMPORTANT]
 > Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
-> [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
+> [Αποποίηση ευθύνης για Responsible AI](/README.md#responsible-ai-disclaimer)
 
 ![Leonardo talks](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/02-first-ai-app/assets/leonardo-talk.jpeg)
 

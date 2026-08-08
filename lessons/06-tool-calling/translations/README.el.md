@@ -67,7 +67,7 @@ _Αυτό το βίντεο εξηγεί το Tool calling, μια μέθοδο 
 
 > [!IMPORTANT]
 > Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
-> [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
+> [Αποποίηση ευθύνης για Responsible AI](/README.md#responsible-ai-disclaimer)
 
 ![Amelia Earhart](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/06-tool-calling/assets/amelia-front.jpeg)
 
@@ -368,9 +368,9 @@ main();
 
 **Time Beetle**: "Φυσικά! Για να αναβαθμίσουμε τη συσκευή της Amelia, ας της προσθέσουμε τα εξής εργαλεία:
 
-- **A tool than can**: Υπολογίζει την απόσταση μεταξύ δύο σημείων σε χάρτη.
-- **A tool than can**: Βρίσκει τη θέση GPS στην οποία βρίσκεται αυτή τη στιγμή η Amelia.
-- **A tool than can**: Καλεί ένα εξωτερικό API για να πάρει την πρόγνωση καιρού για μια δεδομένη τοποθεσία."  
+- **A tool that can**: Υπολογίζει την απόσταση μεταξύ δύο σημείων σε χάρτη.
+- **A tool that can**: Βρίσκει τη θέση GPS στην οποία βρίσκεται αυτή τη στιγμή η Amelia.
+- **A tool that can**: Καλεί ένα εξωτερικό API για να πάρει την πρόγνωση καιρού για μια δεδομένη τοποθεσία."  
 
 Ορίστε οι συναρτήσεις, το μόνο που έχεις να κάνεις είναι να τις καταχωρήσεις και να τις δοκιμάσεις:
 

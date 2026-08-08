@@ -108,7 +108,7 @@ _Αυτό το βίντεο προσφέρει μια εισαγωγή στη β
 
 > [!IMPORTANT]
 > Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
-> [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
+> [Αποποίηση ευθύνης για Responsible AI](/README.md#responsible-ai-disclaimer)
 
 ![Ludovico Sforza](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/03-prompt-engineering/assets/ludovico.png)
 
@@ -296,7 +296,7 @@ _Αυτό το βίντεο προσφέρει μια εισαγωγή στη β
 - Upward wind
 - Distance to hill
 
-Χρησιμοποίησε την τεχνική chain-of-though για να καταλήξεις σε μια απάντηση.
+Χρησιμοποίησε την τεχνική chain-of-thought για να καταλήξεις σε μια απάντηση.
 
 Ορίστε ένα starter project [Starter project](/app/README.md).
 
