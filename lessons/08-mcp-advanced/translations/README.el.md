@@ -84,7 +84,7 @@ _Αυτό το βίντεο εξηγεί τη χρήση LLM με το Model Con
 
 > [!IMPORTANT]
 > Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
-> [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
+> [Αποποίηση ευθύνης για Responsible AI](/README.md#responsible-ai-disclaimer)
 
 ![Hedy Lamarr](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/08-mcp-advanced/assets/hedylamarr.jpeg)
 

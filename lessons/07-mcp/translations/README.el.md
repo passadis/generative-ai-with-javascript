@@ -57,7 +57,7 @@ _Οι ήρωές μας, έχοντας μόλις μάθει για τα tools 
 
 > [!IMPORTANT]
 > Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
-> [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
+> [Αποποίηση ευθύνης για Responsible AI](/README.md#responsible-ai-disclaimer)
 
 ![Scipio Africanus](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/07-mcp/assets/scipio.png)
 
@@ -371,7 +371,7 @@ const tools = await client.listTools();
 ```json
 {
     "name": "add",
-    "description": "Adding two numbers".
+    "description": "Adding two numbers",
     "inputSchema": {
        "type":"object",
        "properties":{
