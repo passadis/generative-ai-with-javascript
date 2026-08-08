@@ -1,179 +1,177 @@
-# Μάθημα 1: Εισαγωγή στη Γεννητική Τεχνητή Νοημοσύνη (Generative AI) και στα Μεγάλα Γλωσσικά Μοντέλα (LLM) για προγραμματιστές JavaScript 
+# Leçon 1 : Introduction à l'intelligence artificielle générative et aux LLMs pour les développeurs JavaScript
 
-Σε αυτό το κεφάλαιο θα μάθεις:
+Dans ce chapitre, vous apprendrez :
 
-- Να κατανοείς τα βασικά της Γεννητικής Τεχνητής Νοημοσύνης (Generative AI) και των Μεγάλων Γλωσσικών Μοντέλων (LLMs).
-- Να αναγνωρίζεις τις πιθανές εφαρμογές και τους περιορισμούς των LLM στην ανάπτυξη με JavaScript.
-- Να εξερευνάς πώς η Generative AI μπορεί να βελτιώσει τις εμπειρίες χρηστών σε εφαρμογές JavaScript.
+* Comprendre les bases de l'IA générative et des modèles de langage de grande taille (LLMs).
+* Identifier les applications potentielles et les limites des LLMs dans le développement JavaScript.
+* Explorer comment l'IA générative peut améliorer les expériences utilisateur dans les applications JavaScript.
 
-## Ρύθμιση
+## Configuration
 
-Αν δεν το έχεις κάνει ήδη, ρύθμισε το περιβάλλον ανάπτυξής σου. Δες εδώ πώς μπορείς να το κάνεις: [Setup your environment](/docs/setup/README.md).
+Si ce n'est pas encore fait, configurez votre environnement de développement. Voici comment procéder : [Configurez votre environnement](/docs/setup/README.md).
 
-## Σχετικοί πόροι
+## Ressources associées
 
-[![Watch a short video about an Introduction to Generative AI](https://img.youtube.com/vi/vLYtDgs_zx8/0.jpg)](https://www.youtube.com/watch?v=vLYtDgs_zx8&list=PLlrxD0HtieHi5ZpsHULPLxm839IrhmeDk&index=1)
+[![Regardez une courte vidéo sur l'introduction à l'IA générative](https://img.youtube.com/vi/vLYtDgs_zx8/0.jpg)](https://www.youtube.com/watch?v=vLYtDgs_zx8&list=PLlrxD0HtieHi5ZpsHULPLxm839IrhmeDk&in[...])
 
-_Αυτό το βίντεο σου δίνει μια εισαγωγή στη Generative AI με JavaScript_
+*Cette vidéo vous donne une introduction à l'IA générative avec JavaScript.*
 
-💼 Slides: [Introduction to Generative AI](/videos/slides/00-intro.pptx)
+💼 Slides : [Introduction à l'IA générative](/videos/slides/00-intro.pptx)
 
-## Γεννητική Τεχνητή Νοημοσύνη
+## L'IA générative
 
-Μέχρι τώρα, μάλλον έχεις ακούσει για εργαλεία όπως το ChatGPT ή γενικότερα για τη Generative AI. Η ιδέα είναι απλή: δίνεις ένα prompt και ένα μοντέλο—που συχνά ονομάζεται Μεγάλο Γλωσσικό Μοντέλο (LLM)—παράγει μια παράγραφο ή ακόμα και μια ολόκληρη σελίδα κειμένου. Αυτή η έξοδος μπορεί να χρησιμοποιηθεί για πολλούς σκοπούς, όπως δημιουργική γραφή, απαντήσεις σε ερωτήσεις και προγραμματισμό.
+Vous avez probablement déjà entendu parler d'outils comme ChatGPT ou d'IA générative. Le concept est simple : vous fournissez une invite, et un modèle—souvent appelé modèle de langage de [...]…
 
-Επιπλέον, η Generative AI έχει εξελιχθεί σε πολυτροπικές δυνατότητες, επιτρέποντάς σου να δώσεις ως είσοδο μια εικόνα ή ένα βίντεο και να λάβεις ποικίλα αποτελέσματα. Αυτή η πρόοδος έχει βελτιώσει σημαντικά τη ροή εργασίας πολλών ανθρώπων—όχι μόνο με παραγωγή κειμένου αλλά και με σύνοψη, μετάφραση και πολλά άλλα.
+De plus, l'IA générative a évolué vers des capacités multimodales, vous permettant de fournir une image ou une vidéo en entrée et de recevoir une variété de sorties. Cette avancée a cons[...]
 
-*Με απλά λόγια, οι διεπαφές φυσικής γλώσσας γίνονται το νέο πρότυπο διεπαφής για πολλές εφαρμογές—και οι χρήστες σου περιμένουν να τις χρησιμοποιούν.*
+*En termes simples, les interfaces en langage naturel deviennent le nouveau standard pour de nombreuses applications, et vos utilisateurs s'attendent à les utiliser.*
 
-## Αφήγηση: Ένα ταξίδι μέσα στον χρόνο
+## Narrative: A Journey Through Time
 
-> [!NOTE] 
-> Ας ξεκινήσουμε με μια επισκόπηση της ιστορίας—μιας ιστορίας που γεφυρώνει το παρελθόν και το μέλλον! Καθώς προχωράς σε αυτό το πρόγραμμα σπουδών, θα ξεκινήσεις μια συναρπαστική περιπέτεια, ταξιδεύοντας πίσω στον χρόνο για να συνεργαστείς με μερικά από τα μεγαλύτερα μυαλά της ιστορίας. Μαζί, θα αντιμετωπίσετε προκλήσεις και θα εξερευνήσετε πώς η Generative AI μπορεί να μεταμορφώσει τις εφαρμογές JavaScript σου._
+> [!NOTE]
+> Commençons par une vue d'ensemble de l'histoire—une histoire qui fait le lien entre le passé et le futur ! Au fur et à mesure que vous progressez dans ce programme, vous embarquerez pour un[...]
 
-> [!NOTE]  
-> Παρότι προτείνουμε να ακολουθήσεις την ιστορία (είναι διασκεδαστική!), [click here](#interact-with-dinocrates) αν προτιμάς να πας κατευθείαν στο τεχνικό περιεχόμενο.
+> [!NOTE]Bien que nous recommandons de suivre l'histoire (c'est amusant !), [cliquez ici](#interagir-avec-dinocrates) si vous préférez passer directement au contenu technique.
 
-Το ταξίδι σου ξεκινά στο Λονδίνο της δεκαετίας του 1860, όπου αναλαμβάνεις τον ρόλο ενός ικανού μηχανικού. Μέσα από μια σειρά από συναρπαστικές περιπέτειες, θα εξελίξεις τις δεξιότητές σου στην AI και θα ξεκλειδώσεις λύσεις που ξεπερνούν τα όρια του χρόνου.
+Votre voyage commence dans le Londres des années 1860, où vous incarnez un mécanicien talentueux. À travers une série d'aventures captivantes, vous affinerez vos compétences en IA et débloquerez[...]
 
-### Μέσα στη δίνη - Λονδίνο 1860
+### Dans le tourbillon - Londres 1860
 
-Στην καρδιά του Λονδίνου της δεκαετίας του 1860, αναγνωρίζεσαι ως ένας από τους πιο ικανούς μηχανικούς της εποχής σου. Το εργαστήριό σου είναι χωμένο σε ένα στενό σοκάκι. Οι τοίχοι είναι γεμάτοι με ράφια που ξεχειλίζουν από μηχανικά εξαρτήματα, σχεδιαγράμματα και μισοτελειωμένα έργα.
+Au cœur du Londres des années 1860, vous êtes reconnu comme l'un des mécaniciens les plus compétents de votre époque. Votre atelier est niché dans une ruelle étroite. Les murs sont recouves[...]
 
-Ο πάγκος εργασίας σου, η καρδιά του εργαστηρίου, είναι ένα οργανωμένο χάος.
+Votre établi, le cœur de votre atelier, est un désordre organisé.
 
 <div>
   <img width=600 src="https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/london.png" alt="London Workshop" />
 </div>
 
-_Στο κέντρο του πάγκου βρίσκεται ο κορμός ενός ρομπότ—ένα θαύμα μηχανικής που έχει απορροφήσει μήνες προσπάθειας. Το ξύλινο πλαίσιο του είναι περίτεχνα σκαλισμένο, και κάθε άρθρωση είναι σχολαστικά σχεδιασμένη για ομαλή κίνηση._
+*Au centre de l'établi se trouve le torse d'un robot—une merveille d'ingénierie qui a requis des mois d'efforts. Son cadre en bois est finement sculpté, chaque articulation minutieusement con[...]
 
-### Ένα γράμμα, για σένα;
+### Une lettre pour vous ?
 
-Ξαφνικά, ένα χτύπημα στην πόρτα διακόπτει τις σκέψεις σου. Επισκέπτες τέτοια ώρα είναι σπάνιοι. Σκουπίζοντας τα χέρια σου σε ένα πανί, πλησιάζεις την πόρτα γεμάτος περιέργεια. 
+Soudain, un coup frappé à la porte interrompt vos pensées. Les visiteurs à cette heure sont rares. En essuyant vos mains sur un chiffon, vous vous approchez de la porte, la curiosité éveillée[...]
 
-Ανοίγοντάς την, δεν βρίσκεις κανέναν. Αντί γι’ αυτό, το βλέμμα σου πέφτει σε έναν σφραγισμένο φάκελο στο έδαφος. Τον σηκώνεις και διαβάζεις:
+En ouvrant, vous ne trouvez personne. Vos yeux se posent plutôt sur une enveloppe scellée au sol. Vous la ramassez et lisez :
 
-_"Αγαπητέ φίλε,_
+*"Mon ami,*
 
-_Σου στέλνω αυτή την επιστολή για να βοηθήσω τις προσπάθειές σου με το αυτόματο. Είναι κρίσιμο να συνεχίσεις αυτό το έργο. Επισυνάπτεται ένα κλειδί για τη βιβλιοθήκη. Συνάντησέ με εκεί σήμερα στις 3 μ.μ._
+*Je vous envoie cette lettre pour soutenir vos efforts avec l'automate. Il est crucial que vous poursuiviez ce travail. Vous trouverez ci-joint une clé pour la bibliothèque. Retrouvez-moi là-ba[...]
 
-_Με εκτίμηση,_
+*Cordialement,*
 
-_Charles Babbage."_
+*Charles Babbage."*
 
-### Προς τη βιβλιοθήκη
+### En route vers la bibliothèque
 
-Ο Charles Babbage, ο σπουδαίος μαθηματικός και εφευρέτης της διαφορικής μηχανής, θέλει να σε συναντήσει. Χωρίς καθυστέρηση, αρπάζεις το παλτό σου και βγαίνεις από την πόρτα.
+Charles Babbage, le grand mathématicien et inventeur de la machine différentielle, souhaite vous rencontrer. Rapidement, vous attrapez votre manteau et sortez.
 
-Μετά από 20 λεπτά περπάτημα κατά μήκος του Τάμεση, φτάνεις επιτέλους στη βιβλιοθήκη, όπου βλέπεις την πόρτα ελαφρώς ανοιχτή.
+Après une marche de 20 minutes le long de la Tamise, vous arrivez enfin à la bibliothèque où vous trouvez la porte légèrement entrouverte.
 
-Μέσα επικρατεί σκοτάδι και κατήφεια, με το μόνο φως να περνά από τα βρόμικα παράθυρα, ρίχνοντας απόκοσμες σκιές στους τοίχους.
+À l'intérieur, il fait sombre et lugubre, la seule lumière passant à travers les fenêtres sales, projetant des ombres inquiétantes sur les murs.
 
-**Εσύ:** "Γεια σας; Κύριε Babbage;"
+**Vous :** "Bonjour ? Monsieur Babbage ?"
 
-Καθώς τα μάτια σου συνηθίζουν το αμυδρό φως, παρατηρείς μια φιγούρα στο βάθος να σου κάνει νόημα. Πλησιάζεις, με τα βήματά σου να αντηχούν στο ξύλινο πάτωμα. Η μορφή γίνεται πιο καθαρή και την αναγνωρίζεις από τις φωτογραφίες στις εφημερίδες· είναι ο Charles Babbage.
+Alors que vos yeux s'adaptent à la faible lumière, vous remarquez une silhouette au loin, vous faisant signe de la main. Vous vous approchez d'elle, vos pas résonnant sur le plancher en bois. L[...]
 
-![Dusty Library](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/library.png)
+![Bibliothèque poussiéreuse](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/library.png)
 
-### Τι είναι αυτή η συσκευή;
+### Quel est cet appareil ?
 
-Τη στιγμή που κάνεις ένα βήμα πιο κοντά, ξεσπά ένα εκτυφλωτικό φως και εκείνος εξαφανίζεται.
+Alors que vous vous approchez davantage, un éclair aveuglant surgit, et il disparaît.
 
-Στο πάτωμα μένει πίσω μια μικρή μεταλλική συσκευή που στριφογυρίζει. Τη σηκώνεις· η ψυχρή, λεία επιφάνειά της βουίζει απαλά. Δεν μοιάζει με τίποτα που έχεις ξαναδεί και όμως σου φαίνεται παράξενα οικεία· νιώθεις μια αίσθηση δύναμης να εκπέμπεται από αυτήν.
+Il ne reste qu'un petit appareil métallique qui tourne sur le sol. Vous le ramassez, sa surface froide et lisse émet un faible bourdonnement. Cela ne ressemble à rien de ce que vous avez vu aup[...]
 
-Μοιάζει με ένα μικροσκοπικό σκαθάρι, περίτεχνα σχεδιασμένο, με τρία κουμπιά: ένα βέλος προς τα πάνω, ένα βέλος προς τα κάτω και ένα λαμπερό κόκκινο κουμπί. Από την πλάτη του προεξέχει μια μικρή κεραία που πάλλεται από ενέργεια.
+Il ressemble à un petit scarabée, finement conçu, avec trois boutons : une flèche vers le haut, une flèche vers le bas, et un bouton rouge lumineux. À l'arrière, une petite antenne s'étend[...]
 
-Παρακινημένος από την περιέργεια, το δάχτυλό σου πλησιάζει το κόκκινο κουμπί. Τη στιγμή που το πατάς, ο κόσμος γύρω σου τρεμοπαίζει και τα χρώματα στροβιλίζονται βίαια γύρω σου.
+Poussé par la curiosité, vos doigts se dirigent vers le bouton rouge. Au moment où vous le pressez, le monde autour de vous scintille, et des couleurs tourbillonnent violemment autour de vous.
 
-Και μετά, σκοτάδι και η αίσθηση πως πέφτεις.
+Puis, le noir complet et une sensation de chute.
 
-![Time Vortex](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/vortex.png)
+![Vortex temporel](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/vortex.png)
 
-### Αλεξάνδρεια 300 π.Χ.
+### Alexandrie 300 av. J.-C.
 
-Ξυπνάς αποπροσανατολισμένος. Καθώς η όρασή σου καθαρίζει, μια αρχαία πόλη απλώνεται μπροστά σου—βουερή, ζωντανή και γεμάτη ζωή.
+Vous vous réveillez, désorienté. Lorsque votre vision s'éclaircit, une cité antique se déploie devant vous—animée, dynamique et vivante.
 
-Άνθρωποι με τόγες κινούνται στους δρόμους, οι φωνές τους μπλέκονται σε μια συμφωνία αρχαίων διαλέκτων, ο αέρας γεμίζει από αρώματα εξωτικών μπαχαρικών και απόμακρες φωνές εμπόρων που διαλαλούν τα εμπορεύματά τους.
+Des gens en toges se déplacent dans les rues, leurs voix se mêlant en une symphonie de dialectes anciens, l'air embaumé des parfums d'épices exotiques et du son lointain des marchands vant[...]
 
-![Alexandria 300 BC](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/alexandria.png)
+![Alexandrie 300 av. J.-C.](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/alexandria.png)
 
-**Εσύ:** Αποκλείεται, πρέπει να χτύπησα το κεφάλι μου, σκέφτεσαι, κλείνοντας τα μάτια και ανοίγοντάς τα ξανά, αλλά η σκηνή παραμένει αμετάβλητη.
+**Vous:** C'est sûr, je dois m'être cogné la tête, pensez-vous, en fermant les yeux et en les rouvrant, la scène reste inchangée.
 
-Έχω παγιδευτεί στο παρελθόν; Τολμώ να πατήσω ξανά εκείνο το κουμπί; Πριν προλάβεις να αποφασίσεις, μια φιγούρα σε πλησιάζει κουνώντας το χέρι.
+Suis-je coincé dans le passé ? Oserai-je appuyer à nouveau sur ce bouton ? Avant que vous ne puissiez décider, une silhouette s'approche de vous, faisant signe.
 
-### Συνάντηση με τον Δεινοκράτη
+### Rencontre avec Dinocrates
 
-Ένας ηλικιωμένος κύριος με τόγα σου κάνει νόημα από τα σκαλιά του μεγάλου ναού. Τα λευκά μαλλιά και τα γένια του λαμπυρίζουν στο φως του ήλιου, χαρίζοντάς του σχεδόν αιθέρια όψη.
+Un vieil homme portant une toge vous fait signe depuis les marches du grand temple. Ses cheveux blancs et sa barbe captent la lumière du soleil, lui donnant une aura presque éthérée.
 
-![Dinocrates wearing a toga](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/dinocrates.png)
+![Dinocrates portant une toge](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/dinocrates.png)
 
-**Δεινοκράτης:** "Καλώς ήρθες, ταξιδιώτη," λέει θερμά. "Είμαι ο Δεινοκράτης, αρχιτέκτονας αυτής της μεγάλης πόλης. Ο ερχομός σου είχε προφητευθεί."
+**Dinocrates:** "Bienvenue, voyageur," dit-il chaleureusement. "Je suis Dinocrates, architecte de cette grande cité. Votre arrivée avait été prédite."
 
-**Εσύ:** Είχε; Εννοώ, φυσικά και είχε. Είμαι εδώ για να βοηθήσω, νομίζω. 
+**Vous:** Elle a été prédite ? Je veux dire, bien sûr qu'elle l'a été. Je suis là pour aider, je suppose.
 
-**Δεινοκράτης:** Ναι, όπως έλεγα, σε περιμέναμε εδώ και καιρό. Έχουμε ένα έργο που απαιτεί τις μοναδικές σου δεξιότητες.
+**Dinocrates:** Oui, comme je le disais, cela faisait un moment que nous vous attendions. Nous avons une tâche nécessitant vos compétences uniques.
 
-**Δεινοκράτης:** "Τα πλοία μας δυσκολεύονται να πλοηγηθούν κατά μήκος της ακτής—πρέπει να χτίσουμε έναν φάρο. Ξέρεις κάτι γι’ αυτά;"
+**Dinocrates:** "Nos navires ont du mal à naviguer le long de la côte—nous devons construire un phare. Savez-vous quelque chose à leur sujet ?"
 
-**Εσύ:** "Είμαι μηχανικός. Κατασκευάζω αυτόματα. Ας δω τι μπορώ να κάνω."
+**Vous:** "Je suis un mécanicien. Je construis des automates. Laissez-moi voir ce que je peux faire."
 
-### Το "Σκαθάρι του Χρόνου"
+### Le "scarabée temporel"
 
-Μια σκέψη σε χτυπά. Μπορεί η συσκευή να με καταλάβει αν της μιλήσω;
+Une pensée vous traverse. L'appareil peut-il me comprendre si je lui parle ?
 
-**Εσύ:** "Συσκευή, μπορείς να με καταλάβεις;"
+**Vous:** "Appareil, peux-tu me comprendre ?"
 
-**Συσκευή:** "Φυσικά. Τι χρειάζεσαι;"
+**Appareil:** "Bien sûr. Que voulez-vous ?"
 
-**Εσύ:** "Μπορείς να με βοηθήσεις να χτίσω έναν φάρο;"
+**Vous:** "Peux-tu m'aider à construire un phare ?"
 
-**Συσκευή:** "Βεβαίως. Αυτό δεν θα είναι πρόβλημα."
+**Appareil:** "Certainement. Cela ne posera aucun problème."
 
-**Εσύ:** "Έχεις όνομα;"
+**Vous:** "As-tu un nom ?"
 
-**Συσκευή:** "Είμαι το Σκαθάρι του Χρόνου. Ο δημιουργός μου με φωνάζει George· λέει ότι είναι καλό όνομα για σκαθάρι."
+**Appareil:** "Je suis le Scarabée Temporel. Mon créateur m'appelle George ; il dit que c'est un bon nom pour un scarabée."
 
-**Εσύ:** Έχεις δίκιο, το George είναι καλό όνομα, ήταν μάλιστα το όνομα του πατέρα μου.
+**Vous:** Tu as raison, George est un bon nom, c'était en fait le prénom de mon père.
 
-![Time Beetle](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/time-beetle.png)
+![Scarabée Temporel](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/time-beetle.png)
 
-_Χρονική συσκευή, ο μεταλλικός σκαραβαίος “George”_
+*Appareil temporel, "George" le scarabée métallique*
 
 > [!NOTE]
-> Το 300 π.Χ., η Αλεξάνδρεια ήταν μια ακμάζουσα πόλη που ιδρύθηκε από τον Μέγα Αλέξανδρο το 331 π.Χ. Γρήγορα έγινε μία από τις σπουδαιότερες πόλεις του ελληνιστικού κόσμου. Σχεδιασμένη από τον κύριο αρχιτέκτονα του Αλεξάνδρου, τον Δεινοκράτη, εξελίχθηκε σε σημαντικό λιμάνι και πολιτιστικό κέντρο.
+> En 300 avant J.-C., Alexandrie était une ville florissante fondée par Alexandre le Grand en 331 avant J.-C. Elle est rapidement devenue l'une des plus grandes cités du monde hellénistique. [...]
 >
-> Η Αλεξάνδρεια ήταν γνωστή για τα εντυπωσιακά της οικοδομήματα, όπως ο Φάρος (lighthouse), ένα από τα Επτά Θαύματα του Αρχαίου Κόσμου, και η θρυλική Βιβλιοθήκη της Αλεξάνδρειας. Η στρατηγική θέση της πόλης την έκανε βασικό κέντρο εμπορίου και ανταλλαγής γνώσης.
+> Alexandrie était connue pour ses structures impressionnantes, dont le Pharos (phare), l'une des Sept Merveilles du monde, et la légendaire Bibliothèque d'Alexandrie. L'emplacement stratégique[...]
 >
-> Υπό το Πτολεμαϊκό Βασίλειο, που ακολούθησε τον θάνατο του Αλεξάνδρου, η Αλεξάνδρεια εξελίχθηκε σε μία από τις πιο ευημερούσες και επιδραστικές πόλεις της εποχής της.
+> Sous le royaume ptolémaïque, qui a suivi la mort d'Alexandre, Alexandrie est devenue l'une des villes les plus prospères et influentes de son époque.
 
-<a id="interact-with-dinocrates"></a>
-## Αλληλεπίδρασε με τον Δεινοκράτη
+## Interagir avec Dinocrates
 
-Αν θέλεις να αλληλεπιδράσεις με τον Δεινοκράτη, εκτέλεσε την εφαρμογή [Characters](/app/README.md). 
+Si vous souhaitez interagir avec Dinocrates, exécutez l'application [Characters](/app/README.md).
 
 > [!IMPORTANT]
-> Αυτό είναι εξ ολοκλήρου φανταστικό· οι απαντήσεις δημιουργούνται από AI.
-> [Αποποίηση ευθύνης για Responsible AI](../../README.md#responsible-ai-disclaimer)
+> Ceci est entièrement fictif ; les réponses sont générées par une IA.
+> [Clause de non-responsabilité AI responsable](/README.md#responsible-ai-disclaimer)
 
-![Dinocrates wearing a toga](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/dinocrates.png)
+![Dinocrates portant une toge](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/01-intro-to-genai/assets/dinocrates.png)
 
-**Βήματα**:
+**Étapes** :
 
-1. Ξεκίνησε ένα [![GitHub Codespace](https://img.shields.io/badge/GitHub-Codespace-brightgreen)](https://codespaces.new/microsoft/generative-ai-with-javascript)
-2. Πήγαινε στο _/app_ στη ρίζα του αποθετηρίου.
-3. Βρες την κονσόλα και εκτέλεσε `npm install` και μετά `npm start`. 
-4. Μόλις εμφανιστεί, επίλεξε το κουμπί "Open in Browser".
-5. Συνομίλησε με τον Δεινοκράτη.
+1. Lancez un [![GitHub Codespace](https://img.shields.io/badge/GitHub-Codespace-brightgreen)](https://codespaces.new/microsoft/generative-ai-with-javascript).
+2. Naviguez vers */app* à la racine du dépôt.
+3. Localisez la console et exécutez `npm install` suivi de `npm start`.
+4. Une fois que l'application est ouverte, sélectionnez le bouton "Ouvrir dans le navigateur".
+5. Discutez avec Dinocrates.
 
 > [!NOTE]
->  Αν εκτελείς το project τοπικά στον υπολογιστή σου, δες τον οδηγό QuickStart για να ρυθμίσεις ένα token [GitHub personal access](/docs/setup/README.md#creating-a-personal-access-token-pat-for-github-model-access) και αντικατέστησε το κλειδί στον κώδικα.
+> Si vous exécutez le projet localement sur votre machine, veuillez consulter le guide de démarrage rapide pour configurer un [token d'accès personnel GitHub](/docs/setup/README.md#creating-a-[...]
 
-### Μια γρήγορη ματιά στον κώδικα
+### Aperçu du code
 
-Παρότι υπάρχουν ακόμη πολλά να καλύψουμε σε αυτό το πρόγραμμα Generative AI, ας ρίξουμε μια σύντομη ματιά στον AI κώδικα για να αρχίσεις να μαθαίνεις πώς χρησιμοποιείται η JavaScript με AI.
+Bien qu'il reste encore beaucoup à couvrir dans ce programme d'apprentissage sur l'IA générative, jetons un coup d'œil rapide au code de l'application IA pour commencer à apprendre à utilis[...]
 
-Μέσα στο `/app/app.js` θα βρεις μια `app.post` συνάρτηση που χειρίζεται τη λειτουργικότητα Generative AI. Φαίνεται παρακάτω:
+Dans `/app/app.js`, vous trouverez une fonction `app.post` qui gère la fonctionnalité d'IA générative. Elle est illustrée ci-dessous :
 
 ```JavaScript
 app.post('/send', async (req, res) => {
@@ -183,7 +181,7 @@ app.post('/send', async (req, res) => {
   const messages = [
     {
       "role": "system",
-      "content": "You are Dinocrates of Alexandria, a famous architect and engineer. Limit your responses to only the time you live in, you don't know anything else. You only want to talk about your architecture and engineering projects, and possibly new ideas you have.",
+      "content": "You are Dinocrates of Alexandria, a famous architect and engineer. Limit your responses to only the time you live in, you don't know anything else. You only want to talk about y[...]
     },
     {
       "role": "user",
@@ -213,137 +211,138 @@ app.post('/send', async (req, res) => {
 });
 ```
 
-Ακολουθεί μια σύνοψη βήμα προς βήμα για το τι κάνει αυτή η συνάρτηση:
+Voici un résumé étape par étape de ce que fait la fonction :
 
-1. **Εξαγωγή μηνύματος από το αίτημα**: Η συνάρτηση εξάγει το μήνυμα από το σώμα του αιτήματος (req.body).
-2. **Δημιουργία πίνακα prompt**: Κατασκευάζει έναν πίνακα από μηνύματα, που περιλαμβάνει ένα system message και το prompt του χρήστη.
-3. **Αρχικοποίηση OpenAI Client**: Ένας OpenAI client αρχικοποιείται με το base URL και το API key από τις μεταβλητές περιβάλλοντος. Ένα μοντέλο _gpt-4o-mini_ από το [GitHub Models](https://github.com/marketplace/models) χρησιμοποιείται για να επεξεργαστεί το prompt και να επιστρέψει μια απάντηση.
-4. **Αποστολή prompt στο OpenAI**: Η συνάρτηση καταγράφει το prompt και το στέλνει στο OpenAI API για να δημιουργήσει ένα completion.
-5. **Χειρισμός απόκρισης**: Αν όλα πάνε καλά, η συνάρτηση απαντά με το prompt και την απάντηση του completion.
-6. **Χειρισμός σφαλμάτων**: Αν προκύψει σφάλμα, απαντά με status 500 και το μήνυμα σφάλματος.
+1. **Extraction du message de la requête** : La fonction extrait le message du corps de la requête (`req.body`).
+2. **Création du tableau d'invite** : Elle construit un tableau de messages, incluant un message système et le message d'invite de l'utilisateur.
+3. **Initialisation du client OpenAI** : Un client OpenAI est initialisé avec l'URL de base et la clé API à partir des variables d'environnement. Un modèle *gpt-4o-mini* de [GitHub Models](ht[...]
+4. **Envoi de l'invite à OpenAI** : La fonction enregistre l'invite et l'envoie à l'API OpenAI pour générer une réponse.
+5. **Gestion de la réponse** : Si cela réussit, la fonction répond avec l'invite et la réponse générée.
+6. **Gestion des erreurs** : En cas d'erreur, elle répond avec un statut 500 et le message d'erreur.
 
-> **Note**: Το [GitHub Copilot](https://github.com/features/copilot) χρησιμοποιήθηκε για τη δημιουργία αυτής της σύνοψης κώδικα. Generative AI στην πράξη!
+> **Remarque** : [GitHub Copilot](https://github.com/features/copilot) a été utilisé pour générer ce résumé de code. L'IA générative en action !
 
-### Τι μπορεί να κάνει η Generative AI για μένα και τις εφαρμογές μου;
+### Que peut faire l'IA générative pour moi et mes applications ?
 
 > [!NOTE]
-> Μέχρι τώρα μάλλον έχεις καταλάβει ότι το Σκαθάρι του Χρόνου λειτουργεί σαν ένας AI assistant με τον οποίο μπορείς να αλληλεπιδράς χρησιμοποιώντας φυσική γλώσσα, γραπτή ή προφορική.
+> Vous avez sans doute compris maintenant que le scarabée temporel fonctionne comme un assistant IA avec lequel vous pouvez interagir en utilisant un langage naturel, écrit ou parlé.
 
-Καθώς η περιπέτειά σου στην Αλεξάνδρεια ξεδιπλώνεται, αρχίζεις να βλέπεις τις δυνατότητες του συνδυασμού δημιουργικότητας, εφευρετικότητας και σύγχρονων εργαλείων για την επίλυση προκλήσεων και τη μεταμόρφωση του κόσμου γύρω σου.
+À mesure que votre aventure à Alexandrie se déroule, vous commencez à entrevoir les possibilités de combiner créativité, ingéniosité et outils de pointe pour résoudre des défis et tran[...]
 
-**Εσύ:** Πες μου περισσότερα για τους φάρους, λες στη συσκευή σου.
+**Vous :** Parlez-moi davantage des phares, dites-vous à votre appareil.
 
-**Σκαθάρι του Χρόνου:** Ένας φάρος είναι ένας πύργος με ισχυρό φως στην κορυφή, τοποθετημένος κοντά στην ακτή για να καθοδηγεί τα πλοία στη θάλασσα. Το φως λειτουργεί ως βοήθημα πλοήγησης, βοηθώντας τους ναυτικούς να αποφεύγουν επικίνδυνα βράχια και υφάλους και να φτάνουν με ασφάλεια στο λιμάνι.
+**Scarabée temporel :** Un phare est une tour équipée d'une lumière vive au sommet, située près de la côte pour guider les navires en mer. La lumière sert d'aide à la navigation, aidant [...]
 
-Ο Δεινοκράτης ακούει τη συζήτησή σας και προσθέτει:
+Dinocrates entend votre conversation et ajoute :
 
-**Δεινοκράτης:** Χρειαζόμαστε έναν φάρο για να οδηγήσουμε τα πλοία μας με ασφάλεια στο λιμάνι. Οι θάλασσες μπορεί να είναι επικίνδυνες και πολλά πλοία έχουν χαθεί στα βράχια. Χρειαζόμαστε έναν φάρο φωτός για να τα καθοδηγεί πίσω στο σπίτι.
+**Dinocrates :** Nous avons besoin d'un phare pour guider nos navires en toute sécurité vers le port. Les mers peuvent être traîtresses, et de nombreux navires se sont échoués sur les roche[...]
 
-#### Περιοχές εφαρμογής της Generative AI
+#### Domaines d'application de l'IA générative
 
-**Εσύ:** Οι φάροι ακούγονται σίγουρα ενδιαφέρον θέμα, αλλά τι άλλο μπορεί να κάνει η Generative AI για μένα και τις εφαρμογές μου; 
+**Vous :** Les phares semblent être un sujet intéressant, c'est sûr, mais que peut faire d'autre l'IA générative pour moi et mes applications ?
 
-**Σκαθάρι του Χρόνου:** Στον 21ο αιώνα, η generative AI έχει φέρει επανάσταση σε πολλούς κλάδους, από την υγεία και τα οικονομικά μέχρι την ψυχαγωγία. Ορίστε μερικά παραδείγματα:
+**Scarabée temporel :** Au 21e siècle, l'IA générative a révolutionné de nombreuses industries, de la santé aux finances en passant par le divertissement. Voici quelques exemples :
 
-- **Chatbot**: Ένα chatbot που μπορεί να δημιουργεί απαντήσεις που μοιάζουν ανθρώπινες σε ερωτήματα χρηστών. Αντί για μια στατική σελίδα FAQ, οι χρήστες μπορούν να αλληλεπιδρούν με ένα chatbot που δίνει δυναμικές απαντήσεις. Αυτό δημιουργεί μια πιο ελκυστική και λιγότερο απογοητευτική εμπειρία χρήστη.
+* **Chatbot** : Un chatbot capable de générer des réponses proches du langage humain pour répondre aux questions des utilisateurs. Au lieu d'une page FAQ statique, les utilisateurs peuvent in[...]
 
-- **Assistants and Agents**: Assistants και agents μπορούν να εκτελούν πιο προχωρημένες οδηγίες, όπως αξιοποίηση εργαλείων για κλήση APIs, εκτέλεση κώδικα, δημιουργία εικόνων και άλλα. Οι προχωρημένοι agents μπορούν να αναλαμβάνουν στόχους και να εκτελούν εργασίες αυτόνομα.
-- **A content creation tool**: Ένα εργαλείο για δημιουργία αναρτήσεων blog και social media posts. Φαντάσου να δημιουργείς καμπάνιες σε λίγα λεπτά αντί για ώρες όταν ένα e-commerce site έχει εκπτώσεις Black Friday.
+* **Assistants et agents** : Ces assistants et agents peuvent exécuter des instructions avancées, comme utiliser des outils pour appeler des API, exécuter du code, générer des images, et bie[...]
 
-- **Code completion**: Ένα εργαλείο συμπλήρωσης κώδικα που μπορεί να παράγει αποσπάσματα κώδικα με βάση την είσοδο του χρήστη. Αυτό μπορεί να εξοικονομήσει πολύ χρόνο στους προγραμματιστές, ειδικά όταν δουλεύουν σε επαναλαμβανόμενες εργασίες.
+* **Un outil de création de contenu** : Un outil pour générer des articles de blogs et des posts sur les réseaux sociaux. Imaginez créer des campagnes en quelques minutes au lieu de plusieur[...]
 
-- **Translation** – Μετάφραση κειμένου μεταξύ γλωσσών με υψηλή ακρίβεια.
+* **Complétion de code** : Un outil de complétion de code capable de générer des extraits de code en fonction des saisies de l'utilisateur. Cela peut faire gagner beaucoup de temps aux dével[...]
 
-Όπως βλέπεις, αυτές οι βελτιώσεις μπορούν να βοηθήσουν τόσο το front office όσο και το back office της εφαρμογής και της εταιρείας σου.
+* **Traduction** – Traduire un texte entre différentes langues avec une grande précision.
 
-Ακολουθεί ένα παράδειγμα εφαρμογής "chatbot application" σε δράση:
+Comme vous pouvez le voir, ces améliorations peuvent à la fois aider le front-office et le back-office de votre application et entreprise.
 
-![Image of chat app](https://camo.githubusercontent.com/76f2ad7cd754a2de2b9957d2070448e130e5ba228084b9b4b128e3af9c9f5239/68747470733a2f2f6c6561726e2e6d6963726f736f66742e636f6d2f656e2d75732f73656d616e7469632d6b65726e656c2f6d656469612f636861742d636f70696c6f742d696e2d616374696f6e2e676966) 
+Voici un exemple d'une "application de chatbot" en action :
 
-**Εσύ:** Συναρπαστικό, θα το σημειώσω να πάω στον 21ο αιώνα για να δω πώς χρησιμοποιούνται αυτά τα εργαλεία.
+![Image de l'application de chat](https://camo.githubusercontent.com/76f2ad7cd754a2de2b9957d2070448e130e5ba228084b9b4b128e3af9c9f5239/68747470733a2f2f6c6561726e2e6d6963726f736f66742e636f6d2f656e2[...]
 
-### Generative AI και το οικοσύστημα JavaScript
+**Vous :** Fascinant, je vais noter l'idée de visiter le 21e siècle pour voir comment ces outils sont utilisés.
 
-**Σκαθάρι του Χρόνου:** Ένας δημοφιλής τρόπος δημιουργίας εφαρμογών στον 21ο αιώνα είναι η χρήση JavaScript. Με κάθε γλώσσα προγραμματισμού, υπάρχει και ένα οικοσύστημα γύρω της. Αυτό το οικοσύστημα περιλαμβάνει τη γλώσσα προγραμματισμού, βιβλιοθήκες και frameworks, υποστήριξη από την κοινότητα, καθώς και IDEs και εργαλεία. Όταν μιλάμε για οικοσύστημα μιας γλώσσας προγραμματισμού, συνήθως εννοούμε τα εξής:
+### L'IA générative et l'écosystème JavaScript
 
-| What | Description | 
-|---|---| 
-| The programming language itself | Συμπεριλαμβανομένης της σύνταξης και των χαρακτηριστικών της. |
-| Libraries and frameworks    | Διαθέσιμες βιβλιοθήκες για αλληλεπίδραση με τα generative AI models.                                                         | 
-| Community supporting the language| Η κοινότητα έχει σημασία, ειδικά όταν προσπαθείς να μάθεις κάτι νέο. Η κοινότητα γύρω από βιβλιοθήκες και frameworks βοηθά να αποφασίσεις ποιες βιβλιοθήκες να χρησιμοποιήσεις. Επηρεάζει επίσης το πόσο εύκολο είναι να βρεις βοήθεια όταν κολλάς. | 
+**Scarabée temporel :** Une manière populaire de construire des applications au 21e siècle est d'utiliser JavaScript. Avec chaque langage de programmation, il y a un écosystème autour. Cet é[...]
 
-**Εσύ:** Ενδιαφέρον, νομίζω έχω ακούσει για προγραμματισμό, δεν είχε πειραματιστεί με αυτό η Ada Lovelace μαζί με τον Charles Babbage;
+| Ce que                               | Description                                                                                                                                               [...]
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------[...]
+| Le langage de programmation lui-même | Incluant sa syntaxe et ses fonctionnalités.                                                                                                             [...]
+| Bibliothèques et frameworks          | Bibliothèques disponibles pour interagir avec les modèles d'IA générative.                                                                           [...]
+| Communauté soutenant le langage      | La communauté est importante, surtout lorsque vous essayez d'apprendre quelque chose de nouveau. La communauté autour des bibliothèques et frameworks [...]
 
-**Σκαθάρι του Χρόνου:** Ναι, η Ada Lovelace ήταν η πρώτη προγραμματίστρια υπολογιστών και ο Charles Babbage ήταν ο εφευρέτης της διαφορικής μηχανής, ενός μηχανικού υπολογιστή. Ήταν πρωτοπόροι στον χώρο της υπολογιστικής, βάζοντας τα θεμέλια της ψηφιακής εποχής.
+**Vous :** Intéressant, j'ai déjà entendu parler de la programmation, je crois. Ada Lovelace et Charles Babbage n'ont-ils pas expérimenté cela ?
 
-**Εσύ:** Ήταν; Τι εννοείς ήταν; Μόλις πήρα γράμμα από τον Charles Babbage.
+**Scarabée temporel :** Oui, Ada Lovelace a été la première programmeuse informatique, et Charles Babbage est l'inventeur de la machine différentielle, un ordinateur mécanique. Ils étaient[...]
 
-**Σκαθάρι του Χρόνου:** Ας πούμε απλώς ότι βρίσκεσαι σε μια μοναδική θέση να αλληλεπιδράς με ιστορικές μορφές με τρόπο που ελάχιστοι άλλοι μπορούν.
+**Vous :** Étaient ? Que voulez-vous dire par "étaient" ? Je viens tout juste de recevoir une lettre de Charles Babbage.
 
-### Οικοσύστημα JavaScript
+**Scarabée temporel :** Disons simplement que vous êtes dans une position unique pour interagir avec des figures historiques comme peu d'autres le peuvent.
 
-**Εσύ:** Άρα οικοσυστήματα είπες, κρατάω σημειώσεις εδώ, τι γίνεται με τη JavaScript και πώς διαφέρει από άλλα οικοσυστήματα;
+### Écosystème JavaScript
 
-**Σκαθάρι του Χρόνου:** Η JavaScript είναι μία από τις πιο δημοφιλείς γλώσσες προγραμματισμού στον κόσμο στον 21ο αιώνα. Ακολουθούν μερικοί λόγοι που είναι τόσο δημοφιλής:
+**Vous :** Vous parlez des écosystèmes ? Je prends des notes. Et JavaScript alors, qu'en est-il ? En quoi est-il différent des autres écosystèmes ?
 
-| What | Description |
-|-|-|
-| Potential for full-stack development | Η JavaScript είναι μία από τις λίγες γλώσσες που μπορούν να χρησιμοποιηθούν τόσο για front-end όσο και για back-end ανάπτυξη. |
-| Rich library ecosystem | Η JavaScript διαθέτει τεράστιο οικοσύστημα βιβλιοθηκών, με frameworks όπως React, Angular, Vue και άλλα. Υπάρχει επίσης το NPM, ο package manager, που είναι ένα από τα μεγαλύτερα αποθετήρια πακέτων στον κόσμο. |
-| Strong community support | Η JavaScript έχει μεγάλη και ενεργή κοινότητα, με πολλούς διαθέσιμους πόρους για μάθηση και ανάπτυξη. Επίσης λειτουργεί απευθείας στον browser, κάτι που αποτελεί μεγάλο πλεονέκτημα. |
-| IDEs and tools | Η JavaScript έχει ποικιλία από διαθέσιμα IDEs, όπως Visual Studio Code, WebStorm και Atom. Αυτά τα IDEs διαθέτουν extensions που έχουν δημιουργηθεί από εταιρείες και την κοινότητα για να σε βοηθούν σε διάφορες πτυχές της ανάπτυξης. |
-| AI and JavaScript | Η JavaScript υποστηρίζει ανάπτυξη AI με βιβλιοθήκες όπως TensorFlow.js, Brain.js, τα APIs του OpenAI και άλλα, επιτρέποντας στους προγραμματιστές να ενσωματώνουν machine learning και Generative AI σε web και server-side εφαρμογές. |
+**Scarabée temporel :** JavaScript est l'un des langages de programmation les plus populaires au monde au 21e siècle. Voici quelques raisons de cette popularité :
 
-**Εσύ:** Είναι πολλοί οι λόγοι, ακούγεται σαν να πρέπει να ποντάρω στη JavaScript για τα μελλοντικά μου έργα.
+| Ce que                                | Description                                                                                                                                              [...]
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------[...]
+| Potentiel de développement full-stack | JavaScript est l'un des rares langages pouvant être utilisés aussi bien pour le développement front-end que back-end.                                [...]
+| Écosystème riche en bibliothèques     | JavaScript dispose d'un vaste écosystème de bibliothèques, avec des frameworks comme React, Angular, Vue, et bien d'autres. NPM, le gestionnaire de[...]
+| Soutien communautaire solide          | JavaScript dispose d'une communauté large et active, avec de nombreuses ressources disponibles pour l'apprentissage et le développement. Il fonctionne [...]
+| IDE et outils                         | JavaScript propose une variété d'IDE, tels que Visual Studio Code, WebStorm et Atom. Ces IDE disposent d'extensions développées par des entreprises e[...]
+| IA et JavaScript                      | JavaScript prend en charge le développement d'IA avec des bibliothèques comme TensorFlow\.js, Brain.js, les APIs d'OpenAI, et plus encore, permettant [...]
 
-**Σκαθάρι του Χρόνου:** Πράγματι, η JavaScript είναι μια ευέλικτη γλώσσα· επίσης η Python είναι δημοφιλής γλώσσα για ανάπτυξη AI.
+**Vous :** Cela fait beaucoup de raisons, on dirait que je devrais parier sur JavaScript pour mes futurs projets.
 
-**Εσύ:** Python; Τι σχέση έχουν τα φίδια με τον προγραμματισμό;
+**Scarabée temporel :** En effet, JavaScript est un langage polyvalent. Python est également très populaire pour le développement en IA.
 
-**Σκαθάρι του Χρόνου:** Ας το αφήσουμε αυτό για άλλη φορά, σύμφωνοι;
+**Vous :** Python ? Quel rapport avec les serpents et la programmation ?
 
-**Σκαθάρι του Χρόνου:** Σου έδωσα παραπάνω λόγους για τους οποίους η JavaScript και το οικοσύστημά της ταιριάζουν γενικά, αλλά γιατί συγκεκριμένα για τη Generative AI; Η απάντηση είναι ότι είναι υποστηριζόμενη γλώσσα από πολλούς cloud vendors και AI frameworks και εργαλεία. Πιστεύουμε επίσης ότι, παρόλο που η Python μπορεί να έρχεται πρώτη στο μυαλό για AI σενάρια, πολλοί προγραμματιστές χρησιμοποιούν JavaScript και Typescript.
+**Scarabée temporel :** Gardons ce sujet pour une prochaine fois, voulez-vous ?
 
-> **Did you know?**  
-> [62.5% of developers say they're using JavaScript](https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/) ενώ πολλοί προτιμούν το [TypeScript](https://www.typescriptlang.org) για νέα projects.
+**Scarabée temporel :** J'ai donné ci-dessus des raisons pour lesquelles JavaScript et son écosystème sont un bon choix en général, mais pourquoi spécifiquement pour l'IA générative ? La[...]
 
-## Εργασία – Βοηθώντας τον Δεινοκράτη 
+> **Le saviez-vous ?**
+> [62,5 % des développeurs affirment utiliser JavaScript](https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/), et beaucoup préfèrent [TypeScript](https:[...]
 
-Για να χρησιμοποιήσεις ένα Μεγάλο Γλωσσικό Μοντέλο (LLM) ώστε να βοηθήσεις τον Δεινοκράτη με τον φάρο που αναφέραμε νωρίτερα στην ιστορία μας, θα χρησιμοποιήσουμε κάτι που ονομάζεται prompts, δηλαδή μια πρόταση που περιγράφει τι θέλεις. Μπορείς να καθορίσεις τόσο την πληροφορία που χρειάζεσαι όσο και το πώς θέλεις να παρουσιαστεί.
+## Mission – Aider Dinocrates
 
-**Σκαθάρι του Χρόνου:** Ας ξεκινήσουμε, ας χρησιμοποιήσουμε ένα LLM για να ερευνήσουμε πώς μπορείς να χτίσεις έναν φάρο για να βοηθήσεις τον Δεινοκράτη.
+Pour utiliser un modèle de langage de grande taille (LLM) afin d'aider Dinocrates avec le phare mentionné précédemment dans notre histoire, nous utiliserons ce qu'on appelle des "prompts", un[...]
 
-**Σκαθάρι του Χρόνου:**: Θα χρειαστεί να δώσεις context στο LLM (δηλαδή "σε μένα") για το πώς να χτίσει, με ποια εργαλεία και ποιους πόρους που θα ήταν διαθέσιμοι στην εποχή της Αλεξάνδρειας.
+**Scarabée temporel :** Allons-y, utilisons un LLM pour rechercher comment construire un phare afin d'aider Dinocrates.
 
-**Εσύ:** Εντάξει, πες μου περισσότερα για τα LLMs.
+**Scarabée temporel :** Vous devrez fournir du contexte au LLM (ex. "moi") sur la manière de construire, avec quels outils et quelles ressources devraient être disponibles à l'époque d'Alexa[...]
 
-**Σκαθάρι του Χρόνου:** Τα LLMs είναι ένας τύπος AI model που μπορεί να παράγει κείμενο που μοιάζει ανθρώπινο με βάση ένα δοσμένο prompt. Εκπαιδεύονται σε τεράστιες ποσότητες δεδομένων και μπορούν να παράγουν κείμενο που είναι συνεκτικό, δημιουργικό και σχετικό με τα συμφραζόμενα.
+**Vous :** D'accord, parlez-moi davantage des LLMs.
 
-**Σκαθάρι του Χρόνου:** Μάλλον θα ήθελες να με ρωτήσεις με καλύτερο τρόπο, ώστε να σου δώσω καλύτερη απάντηση, ξέρεις... *βήχας* *βήχας* φάροι, Αλεξάνδρεια, 300 π.Χ., Δεινοκράτης, Φάρος της Αλεξάνδρειας κτλ.
+**Scarabée temporel :** Les LLMs sont un type de modèle d'IA capable de générer un texte proche du langage humain en fonction d'une invite donnée. Ils sont entraînés sur de vastes quantit[...]
 
-**Εσύ:** Κατάλαβα, να προσθέσω περισσότερο context στο prompt και μετά να σε ρωτήσω.
+**Scarabée temporel :** Vous voudrez probablement me poser une question d'une meilleure manière pour que je puisse vous fournir une meilleure réponse, vous savez *tousse* *tousse* Phares, Alex[...]
 
-**Σκαθάρι του Χρόνου:** Ναι, περιμένω...
+**Vous :** Bien compris, ajoutez plus de contexte à l'invite avant de poser la question.
 
-Επισκέψου το [Microsoft Copilot](https://copilot.microsoft.com), το [ChatGPT](https://chatgpt.com/) ή κάποιο άλλο online chatbot εργαλείο για να δημιουργήσεις ένα σχέδιο κατασκευής του φάρου στην Αλεξάνδρεια.
- 
-> [!TIP] 
-> Προσπάθησε να ζητήσεις από το LLM να δημιουργήσει ένα σχέδιο που να περιλαμβάνει οδηγίες βήμα προς βήμα για την κατασκευή του φάρου. Χρειάζεσαι βοήθεια; Δες τη λύση για καθοδήγηση.
+**Scarabée temporel :** Oui, j'attends...
 
-## Λύση
+Visitez [Microsoft Copilot](https://copilot.microsoft.com), [ChatGPT](https://chatgpt.com/), ou un autre outil en ligne de chatbot pour générer un plan pour construire le phare à Alexandrie.
+
+> [!TIP]
+> Essayez de demander au LLM de générer un plan comprenant des instructions étape par étape pour construire le phare. Besoin d'aide ? Consultez la solution pour des conseils.
+
+## Solution
 
 [Solution](/lessons/01-intro-to-genai/solution/solution.md)
 
-### Έλεγχος γνώσεων
+### Vérification des connaissances
 
-**Ερώτηση:** Ποιες από τις παρακάτω δηλώσεις σχετικά με τη Generative AI και τη JavaScript είναι αληθείς;
+**Question :** Parmi les affirmations suivantes, lesquelles sont vraies concernant l'IA générative et JavaScript ?
 
-A. Οι εφαρμογές Generative AI με JavaScript μπορούν να παράγουν μόνο κείμενο.
-B. Η JavaScript μπορεί να χρησιμοποιηθεί για τη δημιουργία εφαρμογών με AI, όπως chatbots, εργαλεία παραγωγής κειμένου και άλλα.
-C. Η Python είναι η μόνη γλώσσα που χρησιμοποιείται για ανάπτυξη AI.
+A. Les applications JavaScript alimentées par l'IA générative peuvent seulement générer du texte. &#x20;
+B. JavaScript peut être utilisé pour développer des applications alimentées par l'IA, y compris des chatbots, des outils de génération de texte, et plus encore. &#x20;
+C. Python est le seul langage utilisé pour le développement en IA.
 
 [Quiz solution](/lessons/01-intro-to-genai/solution/solution-quiz.md)
 
-## Πόροι για αυτομελέτη
+## Ressources d'auto-apprentissage
 
-- [Generative AI JavaScript video series](https://aka.ms/genai-js)
+* [Série vidéo sur l'IA générative avec JavaScript](https://aka.ms/genai-js)
