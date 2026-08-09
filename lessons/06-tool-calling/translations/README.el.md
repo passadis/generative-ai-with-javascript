@@ -61,6 +61,7 @@ _Αυτό το βίντεο εξηγεί το Tool calling, μια μέθοδο 
 
 **Amelia Earhart**: "Ευχαριστώ! Μακάρι η δική μου συσκευή να είχε αυτό το χαρακτηριστικό. Θα κατευθυνθώ προς τα εκεί τώρα."
 
+<a id="interact-with-amelia-earhart"></a>
 ## Αλληλεπίδρασε με την Amelia Earhart
 
 Αν θέλεις να αλληλεπιδράσεις με την Amelia Earhart, εκτέλεσε την εφαρμογή [Characters](/app/README.md).
@@ -84,7 +85,7 @@ _Αυτό το βίντεο εξηγεί το Tool calling, μια μέθοδο 
 > [!NOTE]
 >  Αν εκτελείς το project τοπικά στον υπολογιστή σου, δες τον οδηγό QuickStart για να ρυθμίσεις ένα token [GitHub personal access](/docs/setup/README.md#creating-a-personal-access-token-pat-for-github-model-access) και αντικατέστησε το κλειδί στον κώδικα.
 
-## Tool calling
+## Κλήση εργαλείων (Tool calling)
 
 **Εσύ**: "Συσκευή, τι μόλις συνέβη;"
 

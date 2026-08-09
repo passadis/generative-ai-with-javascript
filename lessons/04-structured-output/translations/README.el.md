@@ -112,6 +112,7 @@ _Aztec calendar, Wikipedia_
 
 _Patolli - Wikipedia_
 
+<a id="interact-with-montezuma"></a>
 ## Αλληλεπίδρασε με τον Montezuma
 
 Αν θέλεις να αλληλεπιδράσεις με τον Montezuma, εκτέλεσε την εφαρμογή [Characters](/app/README.md). 
@@ -135,7 +136,7 @@ _Patolli - Wikipedia_
 > [!NOTE]
 >  Αν εκτελείς το project τοπικά στον υπολογιστή σου, δες τον οδηγό QuickStart για να ρυθμίσεις ένα token [GitHub personal access](/docs/setup/README.md#creating-a-personal-access-token-pat-for-github-model-access) και αντικατέστησε το κλειδί στον κώδικα.
 
-## Structured Output
+## Δομημένη έξοδος (Structured Output)
 
 **Time Beetle:** Θες να μάθεις πώς νίκησα τον Montezuma;
 
