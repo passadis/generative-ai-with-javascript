@@ -1,4 +1,4 @@
-# Μάθημα 3: Prompt Engineering
+# Μάθημα 3: Μηχανική οδηγιών (Prompt Engineering)
 
 Σε αυτό το κεφάλαιο θα μάθεις:
 
