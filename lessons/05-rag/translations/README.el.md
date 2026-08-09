@@ -1,4 +1,4 @@
-# Μάθημα 5: Μίλησε με τα δεδομένα σου με Retrieval-Augmented Generation (RAG)
+# Μάθημα 5: Μίλησε με τα δεδομένα σου με Ανάκτηση-Ενισχυμένη Γενέαση (Retrieval-Augmented Generation, RAG)
 
 Σε αυτό το κεφάλαιο θα μάθεις:
 

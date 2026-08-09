@@ -1,4 +1,4 @@
-# Μάθημα 4: Structured Output
+# Μάθημα 4: Δομημένη έξοδος (Structured Output)
 
 Σε αυτό το κεφάλαιο θα μάθεις: 
 

@@ -1,4 +1,4 @@
-# Μάθημα 7: MCP, Model Context Protocol
+# Μάθημα 7: Πρωτόκολλο Πλαισίου Μοντέλου (Model Context Protocol, MCP)
 
 Σε αυτό το κεφάλαιο θα μάθεις:
 
