@@ -78,6 +78,7 @@ _Αυτό το βίντεο εξηγεί τη χρήση LLM με το Model Con
 > Η συμβολή της Lamarr στην τεχνολογία δεν αναγνωρίστηκε πλήρως κατά τη διάρκεια της ζωής της, αλλά σήμερα τιμάται ως πρωτοπόρος στον χώρο. Η ιστορία της είναι ένας συναρπαστικός συνδυασμός γοητείας και ιδιοφυΐας, δείχνοντας ότι η αληθινή καινοτομία μπορεί να έρθει από τα πιο απρόσμενα μέρη.
 > Read more here about [Hedy Lamarr](https://en.wikipedia.org/wiki/Hedy_Lamarr) and here about [Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky)
 
+<a id="interact-with-hedy-lamarr"></a>
 ## Αλληλεπίδρασε με την Hedy Lamarr
 
 Αν θέλεις να αλληλεπιδράσεις με την Hedy, εκτέλεσε την εφαρμογή [Characters](/app/README.md). 

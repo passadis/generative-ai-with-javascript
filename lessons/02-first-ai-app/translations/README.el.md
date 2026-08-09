@@ -112,6 +112,7 @@ _Αυτό το βίντεο σου δίνει μια εισαγωγή στα AI 
 **Εσύ:** Θα ήταν τιμή μου να βοηθήσω στο έργο σου,
 "Sarebbe un onore aiutarti con il tuo progetto." 
 
+<a id="interact-with-leonardo"></a>
 ## Αλληλεπίδρασε με τον Leonardo
 
 Αν θέλεις να αλληλεπιδράσεις με τον Leonardo, εκτέλεσε την εφαρμογή [Characters](/app/README.md). 

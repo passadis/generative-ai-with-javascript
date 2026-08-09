@@ -71,6 +71,7 @@ _Αυτό το βίντεο εξηγεί το Retrieval Augmented Generation (RA
 
 **Ada:** Ας μιλήσουμε για μια έννοια που θα ήθελα να ονομάσω RAG, ή Retrieval-Augmented Generation.
 
+<a id="interact-with-ada-lovelace"></a>
 ## Αλληλεπίδρασε με την Ada Lovelace
 
 Αν θέλεις να αλληλεπιδράσεις με την Ada, εκτέλεσε την εφαρμογή [Characters](/app/README.md). 

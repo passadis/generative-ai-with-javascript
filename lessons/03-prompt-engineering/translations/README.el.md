@@ -102,6 +102,7 @@ _Αυτό το βίντεο προσφέρει μια εισαγωγή στη β
 
 ![Airborne, looks down at the city with feet dangling](https://raw.githubusercontent.com/microsoft/generative-ai-with-javascript/main/lessons/03-prompt-engineering/assets/airborne.png)
 
+<a id="interact-with-sforza"></a>
 ## Αλληλεπίδρασε με τον Sforza
 
 Αν θέλεις να αλληλεπιδράσεις με τον Sforza, εκτέλεσε την εφαρμογή [Characters](/app/README.md). 
