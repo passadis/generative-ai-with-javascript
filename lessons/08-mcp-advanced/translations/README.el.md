@@ -236,7 +236,7 @@ console.log(result); // 15
   
 ## Λύση
 
-[Solution](/lessons/08-mcp-advanced/solution/README.md)
+[Solution](/lessons/08-mcp-advanced/solutions/README.md)
 
 ## Έλεγχος γνώσεων
 
@@ -248,7 +248,7 @@ B. Δημιουργεί μια πιο φυσική συνομιλία μεταξ
 
 C. Είναι καλύτερο να βρίσκεται το LLM στον server.
 
-[Solution quiz](/lessons/08-mcp-advanced/solution/solution-quiz.md)
+[Solution quiz](/lessons/08-mcp-advanced/solutions/solution-quiz.md)
 
 ## Σύνοψη
 
